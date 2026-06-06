@@ -1,0 +1,460 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:      #ffffff;
+  --blush:      #e2cfc8;
+  --blush-dark: #c9a4a4;
+  --sage:       #7a8c65;
+  --sage-light: #a3b48f;
+  --gold:       #b8a070;
+  --brown:      #6c7e64;
+  --text:       #4a3f35;
+  --light-sage: #c8d8be;
+  --band-bg:    #faf8f5;
+  --footer-bg:  #6c7e64;
+  --footer-text-primary: #ffffff;
+  --footer-text-secondary: #b8a070;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ── Navigation ─────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; width: 100%;
+  z-index: 100;
+  background: rgba(253, 246, 238, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--blush);
+}
+nav ul {
+  display: flex; justify-content: center; gap: 2.5rem;
+  list-style: none; padding: 0.85rem 2rem;
+}
+nav a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brown); text-decoration: none; transition: color 0.3s;
+}
+nav a:hover { color: var(--sage); }
+
+/* ── Hero ───────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem 5rem;
+  background: #ffffff;
+  position: relative; overflow: hidden;
+}
+
+.floral-corner { position: absolute; }
+.floral-corner.tl { top: 50px; left: 0;   opacity: 0.72; }
+.floral-corner.tr { top: 50px; right: 0;  opacity: 0.72; }
+.floral-corner.bl { bottom: 0; left: 0;   opacity: 0.55; }
+.floral-corner.br { bottom: 0; right: 0;  opacity: 0.55; }
+
+.hero-pre {
+  display: none;
+}
+.hero-names {
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(4.5rem, 13vw, 9.5rem);
+  color: var(--brown); line-height: 1.0;
+  font-weight: 400;
+}
+.hero-amp {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.32em;
+  font-style: italic;
+  color: var(--sage);
+  display: block;
+  letter-spacing: 0.08em;
+  margin: -0.15em 0;
+}
+.hero-tagline-block {
+  margin: 1.8rem auto 0;
+  max-width: 480px;
+}
+.hero-tagline-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  color: var(--text);
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.hero-tagline-upper {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.6rem, 1.4vw, 0.78rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--sage);
+  display: block;
+}
+
+.hero-rule {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 2rem auto;
+}
+.hero-rule-line { width: 80px; height: 1px; background: var(--gold); }
+.hero-rule-gem  { color: var(--gold); font-size: 1rem; }
+
+.hero-location {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.65rem, 1.4vw, 0.8rem);
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--sage); margin-top: 0.9rem;
+}
+.scroll-cue {
+  position: absolute; bottom: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); animation: bob 2s ease-in-out infinite;
+}
+@keyframes bob {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  50%       { opacity: 1;   transform: translateY(5px); }
+}
+
+/* ── Botanical divider ──────────────────────── */
+.botanical-divider {
+  display: block; width: 100%; max-width: 700px;
+  margin: 0 auto; overflow: visible;
+}
+
+/* ── Section scaffold ───────────────────────── */
+.section-wrap {
+  padding: 5rem 2rem; max-width: 960px; margin: 0 auto;
+}
+.section-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--sage); text-align: center; margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  color: var(--brown); text-align: center; margin-bottom: 0.5rem;
+}
+
+.band { background: var(--band-bg); border-top: 1px solid #e8ddd5; border-bottom: 1px solid #e8ddd5; }
+
+/* ── Story ──────────────────────────────────── */
+.story-layout {
+  display: grid; grid-template-columns: 1fr;
+  gap: 3.5rem; align-items: center; margin-top: 1rem;
+}
+.story-body {
+  font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 300;
+  line-height: 1.95; color: var(--text);
+}
+.story-body em { font-style: italic; color: var(--brown); }
+
+/* ── Photo placeholders ─────────────────────── */
+.photo-placeholder {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #f5ebe0 0%, #eddfd0 100%);
+  border: 1.5px dashed var(--blush-dark);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.85rem; text-align: center; padding: 2rem;
+  overflow: hidden;
+}
+/* Decorative corner ticks on the placeholder */
+.photo-placeholder::before,
+.photo-placeholder::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.photo-placeholder::before {
+  top: 8px; left: 8px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.photo-placeholder::after {
+  bottom: 8px; right: 8px;
+  border-width: 0 1.5px 1.5px 0;
+}
+.photo-placeholder .inner-corners::before,
+.photo-placeholder .inner-corners::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.photo-placeholder .inner-corners::before {
+  top: 8px; right: 8px;
+  border-width: 1.5px 1.5px 0 0;
+}
+.photo-placeholder .inner-corners::after {
+  bottom: 8px; left: 8px;
+  border-width: 0 0 1.5px 1.5px;
+}
+.photo-portrait  { aspect-ratio: 3/4; }
+.photo-landscape { aspect-ratio: 16/6; }
+
+.photo-placeholder .ph-icon { color: var(--gold); opacity: 0.7; }
+.photo-placeholder .ph-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brown); opacity: 0.7;
+}
+.photo-placeholder .ph-hint {
+  font-style: italic; font-weight: 300;
+  font-size: 0.88rem; color: var(--brown); opacity: 0.55;
+}
+
+/* ── Photo strip (wide) ─────────────────────── */
+.photo-strip-section {
+  padding: 0 2rem 4rem;
+  max-width: 960px; margin: 0 auto;
+}
+.photo-strip-section img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.photo-strip-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--sage); text-align: center;
+  padding-top: 4rem; margin-bottom: 1.5rem;
+}
+
+/* ── Events grid ────────────────────────────── */
+.events-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2.5rem; margin-top: 2rem;
+}
+.event-card {
+  text-align: center; padding: 2.5rem 1.75rem;
+  background: #fffbf6; border: 1px solid var(--blush);
+  position: relative;
+}
+.event-card::after {
+  content: '';
+  position: absolute;
+  inset: 8px -8px -8px 8px;
+  border: 1px solid var(--light-sage);
+  z-index: -1;
+}
+/* Floral top accent on cards */
+.event-card .card-flower {
+  display: block; margin: 0 auto 1rem;
+}
+
+.event-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: 0.4rem;
+}
+.event-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.7rem; color: var(--brown); margin-bottom: 0.9rem;
+}
+.event-time {
+  font-style: italic; font-weight: 300; font-size: 0.95rem;
+  color: var(--gold); margin-bottom: 0.85rem;
+}
+.event-name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.25rem; }
+.event-address {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem; font-weight: 300;
+  color: var(--sage); line-height: 1.6;
+}
+.map-link {
+  display: inline-block; margin-top: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brown); text-decoration: none;
+  border-bottom: 1px solid var(--gold); padding-bottom: 2px;
+  transition: color 0.25s;
+}
+.map-link:hover { color: var(--sage); }
+
+/* ── Accommodation ──────────────────────────── */
+.hotels-intro {
+  text-align: center; font-style: italic; font-weight: 300;
+  font-size: 1.05rem; color: var(--brown); margin-bottom: 2.5rem;
+}
+.hotels-grid {
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+  max-width: 400px; margin: 0 auto;
+}
+.hotel-card {
+  background: #fffbf6; border: 1px solid var(--blush);
+  padding: 1.75rem 1.5rem; text-align: center;
+}
+.hotel-stars { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.25rem; margin-bottom: 0.75rem; }
+.hotel-name {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.4rem; color: var(--brown); margin-bottom: 0.5rem;
+}
+.hotel-address {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem; font-weight: 300;
+  color: var(--sage); line-height: 1.6; margin-bottom: 0.85rem;
+}
+.hotel-note { font-style: italic; font-weight: 300; font-size: 0.92rem; color: var(--text); }
+
+/* ── Gifts ──────────────────────────────────── */
+#regali {
+  background: var(--cream);
+  border-top: 1px solid var(--blush);
+  border-bottom: 1px solid var(--blush);
+}
+#regali .section-wrap {
+  padding: 4rem 2rem;
+}
+.gift-card {
+  max-width: 520px; margin: 2.5rem auto 0;
+  text-align: center; padding: 2.5rem 2rem;
+  background: #fffbf6; border: 1px solid var(--blush);
+  position: relative;
+}
+.gift-card::after {
+  content: '';
+  position: absolute;
+  inset: 8px -8px -8px 8px;
+  border: 1px solid var(--light-sage);
+  z-index: -1;
+}
+.gift-text {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 300; font-style: italic;
+  color: var(--brown); margin-bottom: 1.85rem;
+  line-height: 1.8;
+}
+.iban-box {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f5ebe0 0%, #eddfd0 100%);
+  border: 1px dashed var(--blush-dark);
+  border-radius: 4px;
+}
+.iban-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: 0.6rem;
+}
+.iban-code {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.15rem; font-weight: 400;
+  letter-spacing: 0.05em; word-spacing: 0.2em;
+  color: var(--brown); margin: 0;
+}
+.gift-note {
+  font-size: 0.95rem; font-weight: 300; font-style: italic;
+  color: var(--sage); margin-top: 1.5rem; line-height: 1.7;
+}
+
+/* ── RSVP ───────────────────────────────────── */
+.rsvp-band {
+  background: linear-gradient(180deg, var(--cream) 0%, #f0e6da 100%);
+  border-top: 1px solid var(--blush);
+}
+.rsvp-deadline {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: 2.5rem;
+}
+.rsvp-deadline strong { color: var(--brown); font-weight: 700; }
+
+form {
+  max-width: 580px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 1.35rem;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.35rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--brown);
+}
+input, select, textarea {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  background: #fffbf6; border: 1px solid var(--blush); border-radius: 0;
+  padding: 0.7rem 0.9rem; color: var(--text);
+  outline: none; width: 100%;
+  transition: border-color 0.25s; appearance: none;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--sage); }
+select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a9e7e'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 0.9rem center;
+}
+textarea { resize: vertical; min-height: 95px; }
+
+.radio-group { display: flex; gap: 2rem; padding-top: 0.2rem; }
+.radio-opt {
+  display: flex; align-items: center; gap: 0.5rem; cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 300; color: var(--text);
+}
+.radio-opt input[type="radio"] {
+  width: 15px; height: 15px;
+  accent-color: var(--sage); cursor: pointer; padding: 0;
+}
+.btn-submit {
+  align-self: center; margin-top: 0.5rem;
+  background: var(--brown); color: var(--cream);
+  border: none; padding: 0.95rem 2.75rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  cursor: pointer; transition: background 0.3s;
+}
+.btn-submit:hover { background: var(--sage); }
+
+/* ── Footer ─────────────────────────────────── */
+footer {
+  text-align: center; padding: 3.5rem 2rem;
+  background: var(--footer-bg); position: relative; overflow: hidden;
+}
+.footer-floral {
+  position: absolute; opacity: 0.15;
+}
+.footer-floral.left  { left: 0; bottom: 0; }
+.footer-floral.right { right: 0; bottom: 0; transform: scaleX(-1); }
+.footer-names {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 3rem; color: var(--footer-text-primary); margin-bottom: 0.4rem;
+  position: relative;
+}
+.footer-date {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--footer-text-secondary); position: relative;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 700px) {
+  nav ul { gap: 1.1rem; }
+  .story-layout  { grid-template-columns: 1fr; }
+  .events-grid   { grid-template-columns: 1fr; }
+  .hotels-grid   { grid-template-columns: 1fr; }
+  .form-row      { grid-template-columns: 1fr; }
+  .floral-corner { display: none; }
+  .photo-landscape { aspect-ratio: 4/3; }
+}

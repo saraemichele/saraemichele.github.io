@@ -39,7 +39,8 @@ nav {
 .menu-toggle {
   display: none;
   background: none; border: none; cursor: pointer;
-  font-size: 1.8rem; color: var(--brown);
+  font-size: 1.8rem; /* Menu toggle size */
+  color: var(--brown);
   padding: 0.5rem; transition: color 0.3s;
 }
 .menu-toggle:hover { color: var(--sage); }
@@ -50,7 +51,8 @@ nav {
 }
 nav a {
   font-family: 'Lato', sans-serif;
-  font-size: 0.7rem; font-weight: 400;
+  font-size: 0.7rem; /* Navigation link size */
+  font-weight: 400;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--brown); text-decoration: none; transition: color 0.3s;
 }
@@ -78,13 +80,13 @@ nav a:hover { color: var(--sage); }
 }
 .hero-names {
   font-family: 'Pinyon Script', cursive;
-  font-size: clamp(4.5rem, 13vw, 9.5rem);
+  font-size: clamp(4.5rem, 13vw, 9.5rem); /* Hero names size */
   color: var(--brown); line-height: 1.0;
   font-weight: 400;
 }
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.32em;
+  font-size: 0.32em; /* Ampersand size */
   font-style: italic;
   color: var(--sage);
   display: block;
@@ -99,7 +101,7 @@ nav a:hover { color: var(--sage); }
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-size: clamp(1rem, 2.2vw, 1.25rem); /* Tagline italic size */
   color: var(--text);
   letter-spacing: 0.04em;
   display: block;
@@ -107,7 +109,7 @@ nav a:hover { color: var(--sage); }
 }
 .hero-tagline-upper {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.6rem, 1.4vw, 0.78rem);
+  font-size: clamp(0.7rem, 1.4vw, 0.78rem); /* Tagline uppercase size */
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--sage);
@@ -119,18 +121,19 @@ nav a:hover { color: var(--sage); }
   margin: 2rem auto;
 }
 .hero-rule-line { width: 80px; height: 1px; background: var(--gold); }
-.hero-rule-gem  { color: var(--gold); font-size: 1rem; }
+.hero-rule-gem  { color: var(--gold); font-size: 1rem; /* Hero rule gem size */ }
 
 .hero-location {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.65rem, 1.4vw, 0.8rem);
+  font-size: clamp(0.7rem, 1.4vw, 0.8rem); /* Location size */
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--sage); margin-top: 0.9rem;
 }
 .scroll-cue {
   position: absolute; bottom: 2rem;
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 0.62rem; /* Scroll cue size */
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold); animation: bob 2s ease-in-out infinite;
 }
 @keyframes bob {
@@ -146,16 +149,17 @@ nav a:hover { color: var(--sage); }
 
 /* ── Section scaffold ───────────────────────── */
 .section-wrap {
-  padding: 5rem 2rem; max-width: 960px; margin: 0 auto;
+  padding: 1rem 2rem; max-width: 960px; margin: 0 auto;
 }
 .section-label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 0.62rem; /* Section label size */
+  letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--sage); text-align: center; margin-bottom: 0.6rem;
 }
 .section-title {
   font-family: 'Pinyon Script', cursive;
-  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-size: clamp(2rem, 5vw, 3.1rem); /* Section title size */
   color: var(--brown); text-align: center; margin-bottom: 0.5rem;
 }
 
@@ -167,10 +171,11 @@ nav a:hover { color: var(--sage); }
   gap: 3.5rem; align-items: center; margin-top: 1rem;
 }
 .story-body {
-  font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.15rem); /* Story body size */
+  font-weight: 300;
   line-height: 1.95; color: var(--text);
 }
-.story-body em { font-style: italic; color: var(--brown); }
+.story-body em { font-style: italic; color: var(--text); }
 
 /* ── Photo placeholders ─────────────────────── */
 .photo-placeholder {
@@ -222,17 +227,19 @@ nav a:hover { color: var(--sage); }
 .photo-placeholder .ph-icon { color: var(--gold); opacity: 0.7; }
 .photo-placeholder .ph-label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 0.65rem; /* Photo placeholder label size */
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--brown); opacity: 0.7;
 }
 .photo-placeholder .ph-hint {
   font-style: italic; font-weight: 300;
-  font-size: 0.88rem; color: var(--brown); opacity: 0.55;
+  font-size: 0.88rem; /* Photo placeholder hint size */
+  color: var(--brown); opacity: 0.55;
 }
 
 /* ── Photo strip (wide) ─────────────────────── */
 .photo-strip-section {
-  padding: 0 2rem 4rem;
+  padding: 0 2rem 2rem;
   max-width: 960px; margin: 0 auto;
 }
 .photo-strip-section img {
@@ -244,7 +251,8 @@ nav a:hover { color: var(--sage); }
 }
 .photo-strip-label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 0.62rem; /* Photo strip label size */
+  letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--sage); text-align: center;
   padding-top: 4rem; margin-bottom: 1.5rem;
 }
@@ -273,27 +281,31 @@ nav a:hover { color: var(--sage); }
 
 .event-label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+  font-size: 0.62rem; /* Event label size */
+  letter-spacing: 0.25em; text-transform: uppercase;
   color: var(--sage); margin-bottom: 0.4rem;
 }
 .event-title {
   font-family: 'Pinyon Script', cursive;
-  font-size: 1.7rem; color: var(--brown); margin-bottom: 0.9rem;
+  font-size: 1.7rem; /* Event title size */
+  color: var(--brown); margin-bottom: 0.9rem;
 }
 .event-time {
-  font-style: italic; font-weight: 300; font-size: 0.95rem;
+  font-style: italic; font-weight: 300; font-size: 1.1rem; /* Event time size */
   color: var(--gold); margin-bottom: 0.85rem;
 }
-.event-name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.25rem; }
+.event-name { font-size: 1.05rem; /* Event name size */ font-weight: 400; margin-bottom: 0.25rem; }
 .event-address {
   font-family: 'Lato', sans-serif;
-  font-size: 0.78rem; font-weight: 300;
+  font-size: 0.9rem; /* Event address size */
+  font-weight: 300;
   color: var(--sage); line-height: 1.6;
 }
 .map-link {
   display: inline-block; margin-top: 1.1rem;
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: 0.7rem; /* Map link size */
+  letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--brown); text-decoration: none;
   border-bottom: 1px solid var(--gold); padding-bottom: 2px;
   transition: color 0.25s;
@@ -303,7 +315,8 @@ nav a:hover { color: var(--sage); }
 /* ── Accommodation ──────────────────────────── */
 .hotels-intro {
   text-align: center; font-style: italic; font-weight: 300;
-  font-size: 1.05rem; color: var(--brown); margin-bottom: 2.5rem;
+  font-size: 1.1rem; /* Hotels intro size */
+  color: var(--brown); margin-bottom: 2.5rem;
 }
 .hotels-grid {
   display: grid; grid-template-columns: 1fr; gap: 1.5rem;
@@ -313,17 +326,19 @@ nav a:hover { color: var(--sage); }
   background: #fffbf6; border: 1px solid var(--blush);
   padding: 1.75rem 1.5rem; text-align: center;
 }
-.hotel-stars { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.25rem; margin-bottom: 0.75rem; }
+.hotel-stars { color: var(--gold); font-size: 0.65rem; /* Hotel stars size */ letter-spacing: 0.25rem; margin-bottom: 0.75rem; }
 .hotel-name {
   font-family: 'Pinyon Script', cursive;
-  font-size: 1.4rem; color: var(--brown); margin-bottom: 0.5rem;
+  font-size: 1.6rem; /* Hotel name size */
+  color: var(--brown); margin-bottom: 0.5rem;
 }
 .hotel-address {
   font-family: 'Lato', sans-serif;
-  font-size: 0.75rem; font-weight: 300;
+  font-size: 0.9rem; /* Hotel address size */
+  font-weight: 300;
   color: var(--sage); line-height: 1.6; margin-bottom: 0.85rem;
 }
-.hotel-note { font-style: italic; font-weight: 300; font-size: 0.92rem; color: var(--text); }
+.hotel-note { font-style: italic; font-weight: 300; font-size: 1.1rem; /* Hotel note size */ color: var(--text); }
 
 /* ── Gifts ──────────────────────────────────── */
 #regali {
@@ -348,7 +363,7 @@ nav a:hover { color: var(--sage); }
   z-index: -1;
 }
 .gift-text {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1.1rem, 2vw, 1.1rem); /* Gift text size */
   font-weight: 300; font-style: italic;
   color: var(--brown); margin-bottom: 1.85rem;
   line-height: 1.8;
@@ -362,18 +377,21 @@ nav a:hover { color: var(--sage); }
 }
 .iban-label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  font-size: 0.6rem; /* IBAN label size */
+  letter-spacing: 0.25em; text-transform: uppercase;
   color: var(--sage); margin-bottom: 0.6rem;
 }
 .iban-code {
   font-family: 'Lato', sans-serif;
-  font-size: clamp(0.85rem, 2.5vw, 1.15rem); font-weight: 400;
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem); /* IBAN code size */
+  font-weight: 400;
   letter-spacing: 0.05em; word-spacing: 0.2em;
   color: var(--brown); margin: 0;
   word-break: break-all;
 }
 .gift-note {
-  font-size: 0.95rem; font-weight: 300; font-style: italic;
+  font-size: 0.95rem; /* Gift note size */
+  font-weight: 300; font-style: italic;
   color: var(--sage); margin-top: 1.5rem; line-height: 1.7;
 }
 
@@ -385,7 +403,8 @@ nav a:hover { color: var(--sage); }
 .rsvp-deadline {
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 0.8rem; /* RSVP deadline size */
+  letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--sage); margin-bottom: 2.5rem;
 }
 .rsvp-deadline strong { color: var(--brown); font-weight: 700; }
@@ -399,12 +418,13 @@ form {
 
 label {
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-size: 0.68rem; /* Label size */
+  letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--brown);
 }
 input:not([type="radio"]):not([type="checkbox"]), select, textarea {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: 1rem; /* Input size */
   background: #fffbf6; border: 1px solid var(--blush); border-radius: 0;
   padding: 0.7rem 0.9rem; color: var(--text);
   outline: none; width: 100%;
@@ -425,7 +445,8 @@ textarea { resize: vertical; min-height: 95px; }
 .radio-opt {
   display: flex; align-items: center; gap: 0.5rem; cursor: pointer;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem; font-weight: 300; color: var(--text);
+  font-size: 0.9rem; /* Radio option size */
+  font-weight: 300; color: var(--text);
 }
 .radio-opt input[type="radio"] {
   width: 15px; height: 15px; padding: 0;
@@ -435,7 +456,8 @@ textarea { resize: vertical; min-height: 95px; }
   background: var(--brown); color: var(--cream);
   border: none; padding: 0.95rem 2.75rem;
   font-family: 'Lato', sans-serif;
-  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 0.7rem; /* Submit button size */
+  letter-spacing: 0.28em; text-transform: uppercase;
   cursor: pointer; transition: background 0.3s;
 }
 .btn-submit:hover { background: var(--sage); }
@@ -452,12 +474,14 @@ footer {
 .footer-floral.right { right: 0; bottom: 0; transform: scaleX(-1); }
 .footer-names {
   font-family: 'Pinyon Script', cursive;
-  font-size: 3rem; color: var(--footer-text-primary); margin-bottom: 0.4rem;
+  font-size: 3rem; /* Footer names size */
+  color: var(--footer-text-primary); margin-bottom: 0.4rem;
   position: relative;
 }
 .footer-date {
   font-family: 'Lato', sans-serif;
-  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  font-size: 0.62rem; /* Footer date size */
+  letter-spacing: 0.3em; text-transform: uppercase;
   color: var(--footer-text-secondary); position: relative;
 }
 

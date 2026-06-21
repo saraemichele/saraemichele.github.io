@@ -149,7 +149,7 @@ nav a:hover { color: var(--sage); }
 
 /* ── Section scaffold ───────────────────────── */
 .section-wrap {
-  padding: 1rem 2rem; max-width: 960px; margin: 0 auto;
+  padding: 1rem 2rem 4rem; max-width: 960px; margin: 0 auto;
 }
 .section-label {
   font-family: 'Lato', sans-serif;
@@ -239,7 +239,7 @@ nav a:hover { color: var(--sage); }
 
 /* ── Photo strip (wide) ─────────────────────── */
 .photo-strip-section {
-  padding: 0 2rem 2rem;
+  padding: 2rem;
   max-width: 960px; margin: 0 auto;
 }
 .photo-strip-section img {

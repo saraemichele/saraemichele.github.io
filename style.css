@@ -521,6 +521,9 @@ footer {
   .events-grid   { grid-template-columns: 1fr; }
   .hotels-grid   { grid-template-columns: 1fr; }
   .form-row      { grid-template-columns: 1fr; }
-  .floral-corner { display: none; }
+  .floral-corner.tl,
+  .floral-corner.tr { width: 130px; height: 170px; }
+  .floral-corner.bl,
+  .floral-corner.br { width: 100px; height: 120px; }
   .photo-landscape { aspect-ratio: 4/3; }
 }
